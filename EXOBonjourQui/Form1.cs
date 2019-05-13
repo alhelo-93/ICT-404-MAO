@@ -24,10 +24,10 @@ namespace EXOBonjourQui
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            label2.Text = "Bonjour " + textBox1.Text;//afficher le message des qu'on clique sur Bienvneu
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e) //affiche le bouton des qu'on écrit un text 
         {
             if (textBox1.Text == "")
             {
@@ -41,9 +41,21 @@ namespace EXOBonjourQui
 
         private void label2_Click(object sender, EventArgs e)
         {
-            while{
-                textBox1_
-            }
+         
+                button1.Enabled = true;
+               
+
+           
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
