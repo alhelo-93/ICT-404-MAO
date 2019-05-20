@@ -81,6 +81,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(139, 31);
             this.textBox1.TabIndex = 3;
+           
             // 
             // textBox2
             // 
@@ -146,6 +147,7 @@
             this.button1.TabIndex = 10;
             this.button1.Text = "Calcul";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Result
             // 
@@ -153,9 +155,10 @@
             this.Result.Font = new System.Drawing.Font("Open Sans", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Result.Location = new System.Drawing.Point(103, 418);
             this.Result.Name = "Result";
-            this.Result.Size = new System.Drawing.Size(201, 27);
+            this.Result.Size = new System.Drawing.Size(241, 27);
             this.Result.TabIndex = 11;
-            this.Result.Text = "Revenu imposable:";
+            this.Result.Text = "Revenu imposable : .....";
+            this.Result.Click += new System.EventHandler(this.Result_Click);
             // 
             // Form1
             // 
