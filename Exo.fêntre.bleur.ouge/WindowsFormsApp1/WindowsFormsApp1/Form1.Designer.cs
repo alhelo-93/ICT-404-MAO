@@ -57,6 +57,7 @@
             this.cmdred.TabIndex = 1;
             this.cmdred.Text = "Rouge";
             this.cmdred.UseVisualStyleBackColor = true;
+            this.cmdred.Click += new System.EventHandler(this.cmdred_Click);
             // 
             // cmdupleft
             // 
@@ -66,6 +67,7 @@
             this.cmdupleft.TabIndex = 2;
             this.cmdupleft.Text = "Haut/Gauche";
             this.cmdupleft.UseVisualStyleBackColor = true;
+            this.cmdupleft.Click += new System.EventHandler(this.cmdupleft_Click);
             // 
             // cmdright
             // 
@@ -75,6 +77,7 @@
             this.cmdright.TabIndex = 3;
             this.cmdright.Text = "Haut/Droite";
             this.cmdright.UseVisualStyleBackColor = true;
+            this.cmdright.Click += new System.EventHandler(this.cmdright_Click);
             // 
             // cmddownleft
             // 
@@ -84,6 +87,7 @@
             this.cmddownleft.TabIndex = 4;
             this.cmddownleft.Text = "Bas/Gauche";
             this.cmddownleft.UseVisualStyleBackColor = true;
+            this.cmddownleft.Click += new System.EventHandler(this.cmddownleft_Click);
             // 
             // cmddownright
             // 
@@ -93,6 +97,7 @@
             this.cmddownright.TabIndex = 5;
             this.cmddownright.Text = "Bas/Droite";
             this.cmddownright.UseVisualStyleBackColor = true;
+            this.cmddownright.Click += new System.EventHandler(this.cmddownright_Click);
             // 
             // cmdststs
             // 
@@ -102,6 +107,7 @@
             this.cmdststs.TabIndex = 6;
             this.cmdststs.Text = "Stats";
             this.cmdststs.UseVisualStyleBackColor = true;
+            this.cmdststs.Click += new System.EventHandler(this.cmdststs_Click);
             // 
             // cmdquit
             // 
@@ -128,6 +134,7 @@
             this.Controls.Add(this.cmdblue);
             this.Name = "fentre";
             this.Text = "Fenetre";
+            this.Load += new System.EventHandler(this.fentre_Load);
             this.ResumeLayout(false);
 
         }
