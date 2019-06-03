@@ -92,7 +92,6 @@
             // 
             // textBox3
             // 
-            this.textBox3.Enabled = false;
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
             this.textBox3.Location = new System.Drawing.Point(421, 176);
             this.textBox3.Name = "textBox3";
@@ -106,7 +105,6 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(73, 31);
             this.textBox4.TabIndex = 6;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // textBox5
             // 
@@ -126,6 +124,7 @@
             this.checkBox2.TabIndex = 8;
             this.checkBox2.Text = "Déduction transport";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // checkBox3
             // 
@@ -137,6 +136,7 @@
             this.checkBox3.TabIndex = 9;
             this.checkBox3.Text = "Rabais fidélité (%)";
             this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
             // 
             // button1
             // 
@@ -156,7 +156,6 @@
             this.Result.Size = new System.Drawing.Size(201, 27);
             this.Result.TabIndex = 11;
             this.Result.Text = "Revenu imposable:";
-            this.Result.Click += new System.EventHandler(this.label3_Click);
             // 
             // Form1
             // 
