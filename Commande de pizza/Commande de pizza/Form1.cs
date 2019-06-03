@@ -32,39 +32,18 @@ namespace Commande_de_pizza
             label2.Text = "Commande";
             button1.Text = "Commander";
             Extra.Text = "Extra-fine";
-            textBox2.BackColor = System.Drawing.Color.Yellow;
-            
 
 
 
         }
-                
-              
-        private void button1_Click(object sender, EventArgs e)
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
-            float table;
-            string msg = "Pour la table : "; 
-
-            if (!float.TryParse(textBox1.Text, out table))
-            {
-                MessageBox.Show("Entrez une nombre svp","Erreur");
-                textBox1.Focus();
-                return;
-
-            }else {
-                table = float.Parse(textBox1.Text);
-                
-                textBox2.Text= msg +   table;
-            }
-            if (Extra.Enabled) {
-
-            }
            
-            
-            
-            
+        }
 
-           
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
