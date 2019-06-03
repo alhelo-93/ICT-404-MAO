@@ -32,6 +32,8 @@ namespace Commande_de_pizza
             label2.Text = "Commande";
             button1.Text = "Commander";
             Extra.Text = "Extra-fine";
+            textBox2.BackColor = System.Drawing.Color.Yellow;
+
 
 
 
@@ -44,7 +46,25 @@ namespace Commande_de_pizza
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
+            
+            
+        }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            float table;
+            if (!float.TryParse(textBox1.Text, out table))
+            {
+                MessageBox.Show("Entrez une nombre svp");
+                textBox1.Focus();
+                return;
+
+            }
         }
     }
 }
