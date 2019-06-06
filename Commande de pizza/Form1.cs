@@ -27,41 +27,86 @@ namespace Commande_de_pizza
         {
             // change les nom des boutons cheakbox.radio bouton 
             this.Text = "Pizza";
-            groupBox1.Text = "Pâte";
-            label1.Text = "Table";
-            label2.Text = "Commande";
-            button1.Text = "Commander";
-            Extra.Text = "Extra-fine";
-            textBox2.BackColor = System.Drawing.Color.Yellow;
+            //groupBox1.Text = "Pâte";
+            //label1.Text = "Table";
+            //lblCommande.Text = "Commande";
+            //button1.Text = "Commander";
+            //Extra.Text = "Extra-fine";
+            lblCommande.BackColor = System.Drawing.Color.Yellow;
             
 
 
 
         }
-                
-              
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             float table;
-            string msg = "Pour la table : "; 
+
+            string msg = "Pour la table ";
+
 
             if (!float.TryParse(textBox1.Text, out table))
             {
-                MessageBox.Show("Entrez une nombre svp","Erreur");
+                MessageBox.Show("Entrez une nombre svp", "Erreur");
                 textBox1.Focus();
                 return;
 
-            }else {
+            } else {
                 table = float.Parse(textBox1.Text);
-                
-                textBox2.Text= msg +   table;
+
+                lblCommande.Text = msg + table + " :";
             }
-            if (Extra.Enabled) {
+            if (Extra.Checked == true)
+            {
+
+                lblCommande.Text = lblCommande.Text + " pâte " + "Extra-fine";
+            }
+            else {
 
             }
-           
-            
-            
+            if (Fine.Checked == true)
+            {
+
+                lblCommande.Text = lblCommande.Text + " pâte " + "Fine";
+            }
+            else {
+
+            }
+            if (Normal.Checked == true)
+            {
+
+                lblCommande.Text = lblCommande.Text + " pâte " + "Normal";
+            }
+            else {
+            }
+            if (Epaisse.Checked == true)
+            {
+                lblCommande.Text = lblCommande.Text + " pâte " + "Epaosse";
+            }
+            else {
+
+
+            }
+            lblCommande.Text = lblCommande.Text + " avec ";
+            if (Anchois.Checked == true)
+            {
+
+                lblCommande.Text = lblCommande.Text + " Anchois " + ","  ;
+
+            }
+            else {
+
+            }
+            if (Capres.Checked) {
+
+                lblCommande.Text = lblCommande.Text+ "Capres" + ",";
+            }
+            else
+            {
+
+            }
             
 
            
