@@ -48,13 +48,18 @@ namespace Arch_de_noé
                 MessageBox.Show("Il faut choisir un élément ", "Erreur");
 
             }
+            
+               
+                while (listBox1.SelectedItems.Count != 0)
+                {
+                    listBox2.Items.Add(listBox1.SelectedItem);
+                    listBox1.Items.Remove(listBox1.SelectedItem);
+                }
 
 
 
 
-
-
-        }
+            }
         private void Button2_Click(object sender, EventArgs e)
             {
 
