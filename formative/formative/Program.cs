@@ -16,7 +16,7 @@ namespace formative
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Courses());
+            Application.Run(new frmCourses());
         }
     }
 }
