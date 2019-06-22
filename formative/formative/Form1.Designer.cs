@@ -34,6 +34,8 @@
             this.listCoures = new System.Windows.Forms.ListBox();
             this.CmdSupprimer = new System.Windows.Forms.Button();
             this.cmdimprimer = new System.Windows.Forms.Button();
+            this.cmd_haut = new System.Windows.Forms.Button();
+            this.cmd_bas = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtQuantite
@@ -42,7 +44,6 @@
             this.txtQuantite.Name = "txtQuantite";
             this.txtQuantite.Size = new System.Drawing.Size(25, 20);
             this.txtQuantite.TabIndex = 1;
-            this.txtQuantite.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // CboArticle
             // 
@@ -88,6 +89,7 @@
             this.CmdSupprimer.TabIndex = 5;
             this.CmdSupprimer.Text = "Supprimer";
             this.CmdSupprimer.UseVisualStyleBackColor = true;
+            this.CmdSupprimer.Click += new System.EventHandler(this.CmdSupprimer_Click);
             // 
             // cmdimprimer
             // 
@@ -97,20 +99,47 @@
             this.cmdimprimer.TabIndex = 6;
             this.cmdimprimer.Text = "Imprimer";
             this.cmdimprimer.UseVisualStyleBackColor = true;
+            this.cmdimprimer.Click += new System.EventHandler(this.Cmdimprimer_Click);
+            // 
+            // cmd_haut
+            // 
+            this.cmd_haut.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmd_haut.Location = new System.Drawing.Point(177, 140);
+            this.cmd_haut.Name = "cmd_haut";
+            this.cmd_haut.Size = new System.Drawing.Size(30, 30);
+            this.cmd_haut.TabIndex = 7;
+            this.cmd_haut.Text = "▲";
+            this.cmd_haut.UseVisualStyleBackColor = true;
+            this.cmd_haut.Click += new System.EventHandler(this.Cmd_haut_Click);
+            // 
+            // cmd_bas
+            // 
+            this.cmd_bas.Location = new System.Drawing.Point(177, 215);
+            this.cmd_bas.Name = "cmd_bas";
+            this.cmd_bas.Size = new System.Drawing.Size(30, 30);
+            this.cmd_bas.TabIndex = 8;
+            this.cmd_bas.Text = "▼";
+            this.cmd_bas.UseVisualStyleBackColor = true;
+            this.cmd_bas.Click += new System.EventHandler(this.Cmd_bas_Click);
             // 
             // frmCourses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(199, 376);
+            this.ClientSize = new System.Drawing.Size(212, 376);
+            this.ControlBox = false;
+            this.Controls.Add(this.cmd_bas);
+            this.Controls.Add(this.cmd_haut);
             this.Controls.Add(this.cmdimprimer);
             this.Controls.Add(this.CmdSupprimer);
             this.Controls.Add(this.listCoures);
             this.Controls.Add(this.CmdAjouter);
             this.Controls.Add(this.CboArticle);
             this.Controls.Add(this.txtQuantite);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmCourses";
-            this.Text = "Cours";
+            this.Text = "Courses";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,6 +152,8 @@
         private System.Windows.Forms.ListBox listCoures;
         private System.Windows.Forms.Button CmdSupprimer;
         private System.Windows.Forms.Button cmdimprimer;
+        private System.Windows.Forms.Button cmd_haut;
+        private System.Windows.Forms.Button cmd_bas;
     }
 }
 
