@@ -39,7 +39,7 @@ namespace formative
                 else  
                 {
                     
-                    listCoures.Items.Add(CboArticle.SelectedItem + " : "+ txtQuantite.Text);
+                    lstCoures.Items.Add(CboArticle.SelectedItem + " : "+ txtQuantite.Text);
                     CboArticle.Items.Remove(CboArticle.SelectedItem);
                     txtQuantite.ResetText();
                     
@@ -52,13 +52,18 @@ namespace formative
         {
 
             // j'ai la pine à faire ici 
-            if (listCoures.SelectedItem != null)
+            if (lstCoures.SelectedItem != null)
             {
                 // sur tout enlever la quntité et les " :"
                 //listCoures.SelectedItem = listCoures.SelectedItem.ToString().Substring(0,text);
-                CboArticle.Items.Add(listCoures.SelectedItem);
+                string s = lstCoures.SelectedItem.ToString();
+
+                int pos = s.IndexOf(":");
+                string res = s.Substring(0,pos);
+
+                CboArticle.Items.Add(res);
                 
-                listCoures.Items.Remove(listCoures.SelectedItem);
+                lstCoures.Items.Remove(lstCoures.SelectedItem);
 
             }
             else {
@@ -79,29 +84,29 @@ namespace formative
 
 
 
-            int i = listCoures.SelectedIndex - 1;
-            object  liste = listCoures.SelectedItem;
+            int i = lstCoures.SelectedIndex - 1;
+            object  liste = lstCoures.SelectedItem;
 
             if (i < 0)
                 return;
-                listCoures.Items.Remove(liste);
-                listCoures.Items.Insert(i, liste);
-                listCoures.SetSelected(i,true);
+                lstCoures.Items.Remove(liste);
+                lstCoures.Items.Insert(i, liste);
+                lstCoures.SetSelected(i,true);
             
         }
         //Déplacer  en bas 
         private void Cmd_bas_Click(object sender, EventArgs e)
         {
 
-            int i = listCoures.SelectedIndex + 1;
-            object liste = listCoures.SelectedItem;
+            int i = lstCoures.SelectedIndex + 1;
+            object liste = lstCoures.SelectedItem;
 
-            if (i > 0)
+            if (i >= lstCoures.Items.Count)
                 return;
-            listCoures.Items.Remove(liste);
-            listCoures.Items.Insert(i, liste);
-            listCoures.SetSelected(i, true);
-
+            lstCoures.Items.Remove(liste);
+            lstCoures.Items.Insert(i, liste);
+            lstCoures.SetSelected(i, true);
+           
         }
     }
 

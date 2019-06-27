@@ -31,7 +31,7 @@
             this.txtQuantite = new System.Windows.Forms.TextBox();
             this.CboArticle = new System.Windows.Forms.ComboBox();
             this.CmdAjouter = new System.Windows.Forms.Button();
-            this.listCoures = new System.Windows.Forms.ListBox();
+            this.lstCoures = new System.Windows.Forms.ListBox();
             this.CmdSupprimer = new System.Windows.Forms.Button();
             this.cmdimprimer = new System.Windows.Forms.Button();
             this.cmd_haut = new System.Windows.Forms.Button();
@@ -73,13 +73,13 @@
             this.CmdAjouter.UseVisualStyleBackColor = true;
             this.CmdAjouter.Click += new System.EventHandler(this.CmdAjouter_Click);
             // 
-            // listCoures
+            // lstCoures
             // 
-            this.listCoures.FormattingEnabled = true;
-            this.listCoures.Location = new System.Drawing.Point(25, 94);
-            this.listCoures.Name = "listCoures";
-            this.listCoures.Size = new System.Drawing.Size(150, 212);
-            this.listCoures.TabIndex = 4;
+            this.lstCoures.FormattingEnabled = true;
+            this.lstCoures.Location = new System.Drawing.Point(25, 94);
+            this.lstCoures.Name = "lstCoures";
+            this.lstCoures.Size = new System.Drawing.Size(150, 212);
+            this.lstCoures.TabIndex = 4;
             // 
             // CmdSupprimer
             // 
@@ -132,7 +132,7 @@
             this.Controls.Add(this.cmd_haut);
             this.Controls.Add(this.cmdimprimer);
             this.Controls.Add(this.CmdSupprimer);
-            this.Controls.Add(this.listCoures);
+            this.Controls.Add(this.lstCoures);
             this.Controls.Add(this.CmdAjouter);
             this.Controls.Add(this.CboArticle);
             this.Controls.Add(this.txtQuantite);
@@ -149,7 +149,7 @@
         private System.Windows.Forms.TextBox txtQuantite;
         private System.Windows.Forms.ComboBox CboArticle;
         private System.Windows.Forms.Button CmdAjouter;
-        private System.Windows.Forms.ListBox listCoures;
+        private System.Windows.Forms.ListBox lstCoures;
         private System.Windows.Forms.Button CmdSupprimer;
         private System.Windows.Forms.Button cmdimprimer;
         private System.Windows.Forms.Button cmd_haut;
