@@ -30,11 +30,19 @@ namespace Test_email
 
         private void Btn_check_Click(object sender, EventArgs e)
         {
-            if (txtemail.Text == "")
+            string s = txtemail.Text;
+
+            if (txtemail.Text != "")
             {
+
+
+
+            }
+            else {
 
                 MessageBox.Show("Veuillez remplir le champ Email afin de procéder à sa vérivcation,SVP", "Champ Email Vide");
                 lbl_mail_check.ForeColor = System.Drawing.Color.Red;
+
             }
         }
     }
